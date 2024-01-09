@@ -5,12 +5,12 @@
   tasks:
 
   - name: install apache2 package
-    yum:
+    dnf:
       name: httpd
       state: absent
  
   - name: add php support for apache
-    yum:
+    dnf:
       name: php
       state: absent
 
