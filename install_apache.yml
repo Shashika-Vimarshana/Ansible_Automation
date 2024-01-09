@@ -5,16 +5,16 @@
   tasks:
  
   - name: update repository index
-    yum:
+    dnf:
       update_cache: yes
  
   - name: install apache2 package
-    yum:
+    dnf:
       name: httpd
       state: latest
  
   - name: add php support for apache
-    yum:
+    dnf:
       name: php
       state: latest
 
