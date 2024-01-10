@@ -1,7 +1,7 @@
 ---
 
 - hosts: all
-  became: true
+  become: true
   tasks:
 
   - name: Install apache and php
