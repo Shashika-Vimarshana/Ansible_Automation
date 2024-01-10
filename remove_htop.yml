@@ -5,6 +5,6 @@
   tasks:
 
   - name: install htop
-    yum:
+    dnf:
       name: htop
       status: absent 
