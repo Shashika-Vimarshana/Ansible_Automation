@@ -4,7 +4,7 @@
   become: true
   tasks:
 
-  - name: install htop
+  - name: Uninstall htop
     dnf:
       name: htop
-      status: absent 
+      state: absent 
