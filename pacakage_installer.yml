@@ -1,0 +1,30 @@
+---
+
+- hosts: workstations
+  become: true
+  tasks:
+
+     - name: Install Terraform in to workstation
+       tags: workstations
+       unarchive:  
+           src: https://releases.hashicorp.com/terraform/1.6.6/terraform_1.6.6_linux_amd64.zip
+           dest: /usr/local/bin
+           remote_src: yes
+           mode: 0755
+           owner: root
+           group: root
+
+- hosts: web_servers
+  become: true
+  tasks:
+
+     - name: Install Terraform 
+       tags: webterra
+       unarchive:
+           src: https://releases.hashicorp.com/terraform/1.6.6/terraform_1.6.6_linux_amd64.zip
+           dest: /usr/local/bin
+           remote_src: yes
+           mode: 0755
+           owner: root
+           group: root
+
