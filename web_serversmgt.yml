@@ -1,0 +1,15 @@
+---
+
+- hosts: web_servers
+  become: true
+  tasks: 
+
+  - name: Send Web Contents to webservers
+    tags: httpd,web
+    copy:
+      src: sample.html
+      dest: /var/www/html/index.html
+      owner: root
+      group: root
+      mode: 0644
+
