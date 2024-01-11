@@ -4,8 +4,15 @@
   become: true
   tasks:
 
-  - name: Install Mariadb
-    tags: db,mariadb,RedHat
+  - name: Install Mariadb Server
+    tags: dbserver,mariadb-server
     package:
        name: mariadb-server
        state: latest
+
+  - name: Install Mariadb Client
+    tags: dbclient,mariadb-client
+    package:
+       name: mariadb-client
+       state: latest
+
