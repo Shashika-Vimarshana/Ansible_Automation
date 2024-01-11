@@ -5,6 +5,7 @@
   tasks:
 
   - name: Install Mariadb
+    tags: db,mariadb,RedHat
     package:
        name: mariadb-server
        state: latest
